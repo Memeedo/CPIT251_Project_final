@@ -19,6 +19,7 @@ public class MainClass {
 
         Government gov = new Government();
         System.out.println("rllrlrlrlrlrllrlrlrlrlrlrl");
+        System.out.println("kfkf");
         if (gov.Authentication(id, password) == true) {
 
             System.out.println("\nSuccesfully logged in\n");
