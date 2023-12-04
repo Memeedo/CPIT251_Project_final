@@ -61,7 +61,7 @@ public class MainClass {
             }
 
         } else {
-            System.out.println("Failed to login, Wrong ID or passowrd");
+            System.out.println("Failed to login, incorrect ID or Passowrd");
         }
 
     }
