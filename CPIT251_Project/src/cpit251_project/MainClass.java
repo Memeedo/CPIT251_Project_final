@@ -49,7 +49,7 @@ public class MainClass {
                 System.out.println("");    
                 System.out.println("Upon completion,Enter the given key that was sent to you by the government");
                 int key = input.nextInt();
-                if (key == gov.completionKey(service_no,id)) {
+                if (key == gov.completionKey(service_no,id,key)) {
                     System.out.println("You have successfully done the service and it's verified, you may exit now ");
                     
                 } else {

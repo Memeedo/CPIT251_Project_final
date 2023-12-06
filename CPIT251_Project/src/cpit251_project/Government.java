@@ -58,12 +58,10 @@ public class Government {
         allViolators[2] = new User("Wael", 29, 11425, vio3, "lm2943");
         allViolators[3] = new User("Khalid", 21, 12345, vio1, "kh112233");
         all_violotors = allViolators;
-        
-        
-        
-           String[] Services_Names = new String[]{"Street Cleanup", "Food Bank assistance for nonprofit org", "Planting Trees"};
-           int[] Service_Hours = {5, 7, 8};
-           
+
+        String[] Services_Names = new String[]{"Street Cleanup", "Food Bank assistance for nonprofit org", "Planting Trees"};
+        int[] Service_Hours = {5, 7, 8};
+
         ArrayList<Service> the_services = new ArrayList<Service>();
 
         for (int i = 0, service_no = 1; i < 3; i++, service_no++) {
@@ -72,7 +70,7 @@ public class Government {
             the_services.add(service);
 
         }
-        
+
         services = the_services;
 
     }
@@ -101,32 +99,37 @@ public class Government {
             if (serviceNo == services.get(i).getServiceNo()) {
 
                 // and it's accepted from the governemnt then return true........
-                //.........
+                
+                //Setting the service for the violatior in question
                 violator.setService(services.get(i));
-              
+
                 return true;
 
             } else {
                 requestAcceptance = false;
             }
         }
-        
 
         return requestAcceptance;
 
     }
 
-    public int completionKey(int ServiceNo,int ID) {
-        int key = 60;
-        key += ServiceNo;
+    public int completionKey(int ServiceNo, int ID,int vio_key) {
+        int completion_key = 60;
+        completion_key  += ServiceNo;
         for (int i = 0; i < all_violotors.length; i++) {
             // updating the database of the government
-            if (all_violotors[i].getID()==ID) {
-                all_violotors[i].setService(violator.getService());
+            if (all_violotors[i].getID() == ID) {
+                if (completion_key == vio_key) {
+                    //updating the database of the government
+                   all_violotors[i].setService(violator.getService()); 
+                   return completion_key;
+                }
+                
             }
         }
 
-        return key;
+        return completion_key;
 
     }
 
@@ -139,15 +142,6 @@ public class Government {
         }
         return null;
     }
-    
-//    public void checkingTheAssignedService(int ID){
-//        for (int i = 0; i < all_violotors.length; i++) {
-//            if (ID == all_violotors[i].getID()) {
-//             all_violotors[i].getService().serviceToString();   
-//            }
-//            
-//        }
-//    
-//    }
+
 
 }
