@@ -50,7 +50,8 @@ public class Government {
         User[] allViolators = new User[4];
 
         Violation vio1 = new Violation("Over Speeding by more than 25 km/hr", 98765, "150 SAR");
-        Violation vio2 = new Violation("Stealing valuables that are less than 500 SAR of Worth", 98845, "600 SAR");
+        Violation vio2 = new Violation("Stealing valuables that are less than 500 SAR of Worth", 98845, 
+                "600 SAR");
         Violation vio3 = new Violation("Drifting in public streets", 93147, "1000 SAR");
 
         allViolators[0] = new User("Ahmed", 22, 11223, vio1, "ah2233");
@@ -59,7 +60,8 @@ public class Government {
         allViolators[3] = new User("Khalid", 21, 12345, vio1, "kh112233");
         all_violotors = allViolators;
 
-        String[] Services_Names = new String[]{"Street Cleanup", "Food Bank assistance for nonprofit org", "Planting Trees"};
+        String[] Services_Names = new String[]{"Street Cleanup", "Food Bank assistance for nonprofit org", 
+            "Planting Trees"};
         int[] Service_Hours = {5, 7, 8};
 
         ArrayList<Service> the_services = new ArrayList<Service>();
@@ -118,7 +120,7 @@ public class Government {
         int completion_key = 60;
         completion_key  += ServiceNo;
         for (int i = 0; i < all_violotors.length; i++) {
-            // updating the database of the government
+           
             if (all_violotors[i].getID() == ID) {
                 if (completion_key == vio_key) {
                     //updating the database of the government
