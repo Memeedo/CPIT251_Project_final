@@ -37,6 +37,7 @@ public class Service {
         this.serviceName = serviceName;
     }
 
+
     public int getServiceHours() {
         return serviceHours;
     }
