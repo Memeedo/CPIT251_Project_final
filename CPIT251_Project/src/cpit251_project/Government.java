@@ -7,7 +7,8 @@ public class Government {
     private Violation violation;
     private ArrayList<Service> services;
     private User violator;
-    private User all_violotors[];
+    
+    private User all_violotors[]; // this is the hypothetical database of the government, like a sumlation of it
 
     public Government(User violator) {
         this.violator = violator;
@@ -50,8 +51,7 @@ public class Government {
         User[] allViolators = new User[4];
 
         Violation vio1 = new Violation("Over Speeding by more than 25 km/hr", 98765, "150 SAR");
-        Violation vio2 = new Violation("Stealing valuables that are less than 500 SAR of Worth", 98845, 
-                "600 SAR");
+        Violation vio2 = new Violation("Stealing valuables that are less than 500 SAR of Worth", 98845,  "600 SAR");
         Violation vio3 = new Violation("Drifting in public streets", 93147, "1000 SAR");
 
         allViolators[0] = new User("Ahmed", 22, 11223, vio1, "ah2233");

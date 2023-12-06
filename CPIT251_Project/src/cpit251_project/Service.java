@@ -6,18 +6,25 @@ public class Service {
     private int serviceHours;
     private int serviceNo;
 
-    public Service(String serviceName,  int serviceHours) {
+    public Service(String serviceName, int serviceHours) {
         this.serviceName = serviceName;
-        
+
         this.serviceHours = serviceHours;
     }
-      public Service(String serviceName, int serviceHours, int serviceNo) {
+
+    public Service(String serviceName, int serviceHours, int serviceNo) {
         this.serviceName = serviceName;
-        
+
         this.serviceHours = serviceHours;
         this.serviceNo = serviceNo;
     }
+    
+     public void serviceToString() {
+        System.out.println("Service name: " + serviceName);
+        System.out.println("Service hours: " + serviceHours);
+        System.out.println("Service Number: " + serviceNo);
 
+    }
 
     public Service() {
     }
@@ -30,10 +37,6 @@ public class Service {
         this.serviceName = serviceName;
     }
 
-  
-
-   
-
     public int getServiceHours() {
         return serviceHours;
     }
@@ -41,13 +44,8 @@ public class Service {
     public void setServiceHours(int serviceHours) {
         this.serviceHours = serviceHours;
     }
-    public void serviceToString(){
-        System.out.println("Service name: "+ serviceName);
-        System.out.println("Service hours: " + serviceHours);
-        System.out.println("Service Number: "+ serviceNo);
-    
-    
-    }
+
+   
 
     public int getServiceNo() {
         return serviceNo;
@@ -62,7 +60,4 @@ public class Service {
         return "Service{" + "serviceName=" + serviceName + ",  serviceHours=" + serviceHours + ", serviceNo=" + serviceNo + '}';
     }
 
-    
-    
-  
 }

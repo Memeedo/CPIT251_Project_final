@@ -9,11 +9,7 @@ import static org.junit.Assert.*;
  * @author starx
  */
 public class Completion_Key_Verification {
-    
-   
      private Government gov;
-     
-     
     @Before
     public void setUp() {
         gov = new Government();
@@ -28,7 +24,8 @@ public class Completion_Key_Verification {
     int userID = 11345;
     int expectedKey = 62;
     int violator_given_key =62;
-        // the given method is to check whether the violator has done the service by the gov sending to him a key after completion and he should insert the given to verify that he completed the service
+        // the given method is to check whether the violator has done the 
+        //service by the gov sending to him a key after completion and he should insert the given to verify that he completed the service
         assertEquals(expectedKey,gov.completionKey(serviceNo, userID,violator_given_key));
     
     }

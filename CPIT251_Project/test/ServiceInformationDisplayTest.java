@@ -9,9 +9,7 @@ import static org.junit.Assert.*;
 
 
 public class ServiceInformationDisplayTest {
-    
     private Government gov;
-
     @Before
     public void setUp() {
         gov = new Government();

@@ -31,7 +31,7 @@ public class MainClass {
             System.out.println("======================================================");
 
             System.out.println("Request for the selection of community serivces");
-            System.out.println("the selection of cummunity servies\n");
+            System.out.println("the selection set of cummunity servies\n");
             
             for (int i = 0; i < gov.getServices().size(); i++) {
 
@@ -48,6 +48,7 @@ public class MainClass {
                 System.out.println("your selection is accepted by the governemnt");
                 System.out.println("");    
                 System.out.println("Upon completion,Enter the given key that was sent to you by the government");
+                System.out.println("the number: ");
                 int key = input.nextInt();
                 if (key == gov.completionKey(service_no,id,key)) {
                     System.out.println("You have successfully done the service and it's verified, you may exit now ");

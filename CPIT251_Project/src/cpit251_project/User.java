@@ -9,15 +9,14 @@ public class User {
     private String password;
     private Service service;
 
-    public User(String name, int age, int ID,String password) {
+    public User(String name, int age, int ID, String password) {
         this.name = name;
         this.age = age;
         this.ID = ID;
-        
+
         this.password = password;
     }
 
-    
     public User(String name, int age, int ID, Violation violation, String password) {
         this.name = name;
         this.age = age;
@@ -41,12 +40,10 @@ public class User {
     public void setService(Service service) {
         this.service = service;
     }
-    
-    
-  
-       public User(int ID,String password) {
+
+    public User(int ID, String password) {
         this.ID = ID;
-        
+
         this.password = password;
     }
 
